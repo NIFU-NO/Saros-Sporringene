@@ -1,0 +1,25 @@
+---
+format: html
+number-sections: true
+number-offset: 0
+toc: true
+toc-depth: 4
+---
+```{r}
+#Sys.getenv("QUARTO_PROJECT_DIR") #getwd()
+source(here::here("001_configure_report.R"))
+source(here::here(paths$r[[params$cycle]], "introchapter.R"))
+source(here::here(paths$resources, "R", "nifus_formatering.R"))
+```
+
+# Innledning
+
+NIFU har gjennomført halvårlige spørreundersøkelser blant skoleledere og skoleeiere på oppdrag fra Utdanningsdirektoratet siden 2009. Denne undersøkelsen er nummer `r params$nummer_i_rekken` i rekken. Undersøkelsen har fire målgrupper: skoleledere ved grunnskoler og videregående skoler, og kommuner og fylkeskommuner som skoleeiere. Hver spørring er dokumentert gjennom en egen rapport med tittelen «Spørsmål til Skole-Norge». Undersøkelsen `r params$gjennomforing` ble gjennomført i perioden `r params$datefrom` til `r params$dateto`. Antall tema som inngår i undersøkelsene varierer fra gang til gang, og noen tema gjentas med jevne mellomrom. I alt inngikk `r nrow(tbl_1.1_temaoversikt)` tema i denne undersøkelsen. En oversikt over temaene, og hvilke av gruppene de har gått til, vises i @tbl-tbl1_1. Temaene presenteres i hvert sitt kapittel i rapporten.
+
+```{r}
+#| tbl-cap: Tema og målgrupper i Utdanningsdirektoratets spørringer denne runden
+#| label: tbl-tbl1_1
+tbl_1.1_temaoversikt
+```
+
+Dette er i stor grad en deskriptiv rapport, med mange tabeller og figurer. Siden vi ikke oppgir desimaler i tabeller og figurer, vil ikke alltid prosentandeler summere seg nøyaktig til 100. Vær oppmerksom på at i enkelte analyser er gruppene små. Vi rapporterer primært på observerte forskjeller som er statistisk signifikante ifølge Pearsons kji-kvadrattest (5-prosentnivå), og vi har valgt å omtale slike forskjeller som «betydelige».

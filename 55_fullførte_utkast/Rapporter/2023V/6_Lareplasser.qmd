@@ -1,0 +1,157 @@
+---
+format: html
+author: "Rønnaug H. Lyckander"
+number-sections: true
+number-offset: 5
+toc: true
+toc-depth: 4
+---
+```{r}
+source(here::here("001_configure_report.R"))
+source(here::here(paths$resources, "R", "nifus_formatering.R"))
+```
+
+# Læreplasser
+
+Mangel på læreplasser er en viktig årsak til frafall. Kunnskap om læreplassituasjonen og tiltak som kan gi flere læreplasser er derfor viktig for Utdanningsdirektoratets arbeid med å øke antallet elever som fullfører videregående opplæring med yrkeskompetanse. Læreplassituasjonen har vært et gjennomgående tema i tidligere Spørringer til skole-Norge, sist våren 2022. Temaet er også aktualisert gjennom utdanningsmyndighetenes arbeid i fullføringsreformen,[\[4\]](#_ftn4) ny opplæringslov og Samfunnskontrakten for flere læreplasser 2022--2026.[\[5\]](#_ftn5)
+
+Dette kapitlet beskriver fylkeskommunenes vurdering av tilgangen på læreplasser, særskilte lærefag det vurderes som vanskelig å skaffe læreplasser i, og til sist hvilke tiltak fylkeskommunen har for å skaffe nye læreplasser. Til forskjell fra i 2020 og i 2022, da seks fylkeskommuner besvarte spørsmål om læreplassituasjonen, har alle fylkeskommunene svart på disse spørsmålene i årets undersøkelse. Det varierer likevel hvor utfyllende svarene er, spesielt knyttet til tiltak for å skaffe flere læreplasser.
+
+## Fylkenes vurdering av tilgang på læreplasser{#sec-sec6_1}
+
+Fylkeskommunene ble først bedt om å ta stilling til hvor godt ulike beskrivelser passer til situasjonen for elevene som søker læreplass. Disse elevene er i ferd med å avslutte skoledelen av sin videregående opplæring, og skal over i lære i en bedrift. Resultatene for 2023 og 2022 er vist i @tbl-tbl6_1. Som vi ser av totalt antall svar, var det ikke alle fylkeskommunene som svarte på spørsmålet i 2022, og på grunn av relativt få svar bør vi være forsiktige i sammenlikning av resultatene.
+
++----------------------------------------------------------------------------+-------------------+--------------------+----------------------+---------------------+------------+
+|                                                                            | Passer svært godt | Passer ganske godt | Passer ganske dårlig | Passer svært dårlig | Totalt     |
++----------------------------------------------------------------------------+-------------------+--------------------+----------------------+---------------------+------------+
+|                                                                            | Antall            | Antall             | Antall               | Antall              | Antall (N) |
++----------------------------------------------------------------------------+-------------------+--------------------+----------------------+---------------------+------------+
+| Vi antar at de fleste kvalifiserte søkere vil få læreplass                 | 9 (3)             | 2 (3)              | 0 (0)                | 0 (0)               | 11 (6)     |
++----------------------------------------------------------------------------+-------------------+--------------------+----------------------+---------------------+------------+
+| Vi klarer å skaffe læreplass til søkere med opplæringsrett                 | 3 (0)             | 8 (5)              | 0 (0)                | 0 (0)               | 11 (5)     |
++----------------------------------------------------------------------------+-------------------+--------------------+----------------------+---------------------+------------+
+| Vi klarer å skaffe læreplass til søkere uten opplæringsrett                | 1 (0)             | 6 (4)              | 4 (1)                | 0 (1)               | 11 (6)     |
++----------------------------------------------------------------------------+-------------------+--------------------+----------------------+---------------------+------------+
+| Vi er svært bekymret for situasjonen til elever som søker læreplass        | 0 (0)             | 1 (0)              | 6 (3)                | 4 (3)               | 11 (6)     |
++----------------------------------------------------------------------------+-------------------+--------------------+----------------------+---------------------+------------+
+| Lærebedrifter ser på det som aktuelt å si opp eller ta inn færre lærlinger | 0 (0)             | 1 (0)              | 5 (2)                | 5 (4)               | 11 (6)     |
++----------------------------------------------------------------------------+-------------------+--------------------+----------------------+---------------------+------------+
+
+: '*Har skolen/kommunen en helhetlig kompetanseplan som omfatter både etter- og videreutdanning?*', skoleledere og skoleeier kommune, antall {#tbl-tbl6_1}
+
+Tabellen viser at alle fylkeskommunene slutter seg til at utsagnet *vi antar at* *de fleste kvalifiserte søkere vil få læreplass*, passer godt, uavhengig av om de har opplæringsrett. Ni gir uttrykk for at beskrivelsen passer svært godt for situasjonen i fylkeskommunen, mens to vurderer at den passer ganske godt. Det kan se ut som dette er en forbedring fra fjoråret, der halvparten av de seks fylkeskommunene som svarte, oppga at det passer svært godt. I årets undersøkelse er denne andelen 82 prosent.
+
+Samtlige oppgir videre at påstanden om at *fylkeskommunen klarer å skaffe læreplass til søkere med opplæringsrett* passer godt. Tre oppgir at det passer svært godt, mens flertallet på åtte oppgir at det passer ganske godt. En av fylkeskommunene begrunner at de svarer «ganske godt» med at noen voksne søkere med opplæringsrett kan være vanskelig å skaffe læreplass til. Når det gjelder søkere uten opplæringsrett, det vil si søkere som har brukt opp retten til videregående opplæring, så er svarene noe mer forbeholdne. Seks fylkeskommuner svarer at det passer ganske godt, mens en oppgir at det passer svært godt. Fire oppgir at det passer ganske dårlig.
+
+Ingen av fylkeskommunene kjenner seg igjen i beskrivelsen at de er *svært bekymret for situasjonen til elever som søker læreplass*. Ti av elleve svarer at denne påstanden passer dårlig, fordelt med seks svar på alternativet ganske dårlig og fire svar på alternativet svært dårlig. Denne situasjonen ser ut til å være rimelig lik tallene fra 2022.
+
+Til slutt viser resultatene at det store flertallet av fylkeskommunene vurderer at det passer dårlig at lærebedriftene ser det som aktuelt å si opp eller ta inn færre lærlinger. Kun ett svar uttrykker at denne påstanden passer ganske godt. Vi tolker disse svarene slik at fylkeskommunene i liten grad er bekymret for en mulig nedgang i læreplasstilgangen i bedriftene. Flere andre kilder, slik som NHOs kompetansebarometeret og NAVs bedriftsundersøkelse, viser at læreplasstilgangen fortsatt bør være god i og med at mange bedrifter uttrykker behov for faglært arbeidskraft.[\[6\]](#_ftn6)
+
+Tre av fylkeskommunene valgte å kommentere at det generelt er god tilgang på læreplasser og at de av den grunn ikke er bekymret for om de klarer å formidle læreplasser til elevene som er kvalifiserte. Bekymringene til disse fylkeskommunene handlet mer om at en del av elevene som er kvalifiserte for læretiden på «papiret», gjennom bestått Vg1 og Vg2, likevel ikke var forberedt for overgangen til arbeidslivet, av ulike individuelle grunner. Disse elevene opplever fylkeskommunen at det være vanskelig å skaffe læreplasser til. Vi ser at disse beskrivelsene stemmer overens med annen kunnskap, der fylkeskommunene framholder at de har ledige læreplasser, men ikke de «riktige» søkerne.[\[7\]](#_ftn7)
+
+## Utfordringer i særskilte fag{#sec-sec6_2}
+
+Fylkeskommunene fikk også anledning til å spesifisere om det var noen særskilte fag de forventet at det ville bli utfordrende å skaffe læreplasser i. To av fylkeskommunene svarte nei på dette spørsmålet, og hadde derfor ingen forventninger om at noen lærefag ville bli vanskelig å skaffe læreplasser i. Ytterligere to fylkeskommuner oppgav at de ikke visste nok om situasjonen til å kunne svare, mens de resterende sju fylkeskommunene oppga flere særskilte lærefag.
+
+I fjorårets undersøkelse ble det pekt på utfordringer innenfor helse- og oppvekstfagene og elektrikerfaget. Disse fagene nevnes også i år. Elektrikerfaget, helsearbeiderfaget og barne- og ungdomsarbeiderfaget oppgis av tre fylkeskommuner. «De nye fagene» i utdanningsprogrammet Informasjonsteknologi og medieproduksjon er imidlertid fagområdene flest fylkeskommuner, dvs. fire fylkeskommuner, oppgir som utfordrende å skaffe læreplasser til. Disse nye fagbrevområdene er IT-utviklerfaget, IT-driftsfaget, og medieproduksjonsfaget. Det tar tid å etablere nye lærefag, og derfor kan fagene være noe ukjente for bransjene. Det kan sannsynligvis forklare at disse fagene nevnes av flere fylkeskommuner.
+
+Til sist nevner vi at flere fagområder oppgis som utfordrende å skaffe læreplasser til av kun en fylkeskommune. Vi ser at to av disse fagområdene trolig henger sammen med regionalt næringsliv og etterspørselen lokalt. Nordland fylkeskommune oppgir akvakultur, mens Vestfold og Telemark, som har mye prosessindustri i fylket, oppgir kjemiprosessfaget. Andre områder som kun nevnes av en fylkeskommune er fjell- og bergverksfaget, tømrerfaget, salgsfaget, reiselivsfaget, service- og administrasjonsfaget, bilfaget (lette kjøretøy) og rørleggerfaget.
+
+## Fylkenes tiltak for å øke tilgangen til læreplasser{#sec-sec6_3}
+
+To åpne spørsmål handlet om fylkeskommunenes tiltak for å øke antall læreplasser. Fylkeskommunene kunne beskrive generelle tiltak for 2022--2023 og effekter av disse i det første spørsmålet. Det andre spørsmålet omhandlet lokale eller regionale tiltak planlagt eller iverksatt som ledd i oppfølgingen av *Samfunnskontrakten 2022--2026*.
+
+Denne samfunnskontrakten, inngått mellom partene i arbeidslivet og nasjonale myndigheter for første gang i 2012, beskrives i stortingsmeldingen om fullføringsreformen som et viktig tiltak for å nå målet om at flere skal få læreplass.[\[8\]](#_ftn8) Kontrakten danner et grunnlag for systematisk samarbeid som forplikter aktørene til å arbeide for å rekruttere flere lærebedrifter. I stortingsmeldingen kommer det fram at fra 2012 har antallet nye lærekontrakter økt med 24 prosent. I 2021 inngikk partene i arbeidslivet og staten en ny samfunnskontrakt.[\[9\]](#_ftn9) Denne har samme målsetning som før, men legger vekt på å hindre diskriminering i rekruttering av lærlinger for de som tradisjonelt har hatt problemer med å få læreplass. Elever som har bestått, men som har svake karakterer og en del fravær, samt gutter med innvandrerbakgrunn, er blant disse gruppene. I 2022 bevilget regjeringen 370 millioner kroner til fylkene for å skaffe flere læreplasser, som et ledd i satsningen på den nye *Samfunnskontrakten for læreplasser*.[\[10\]](#_ftn10) Gjennom satsningen Utdanningsløftet støttes også fylkenes arbeid for fullføring av videregående opplæring for personer uten opplæringsrett.
+
+Vi har valgt å presentere svarene på de to spørsmålene om tiltak samlet. Alle tiltakene kan overordnet sett sees på ut fra målet om at flere skal få læreplass og fullføre og bestå med yrkeskompetanse, og for fylkeskommunene er det vanskelig å skille mellom mer generelle tiltak og tiltak gjennom Samfunnskontrakten. Der fylkeskommunene har beskrevet effekter av tiltakene, nevner vi dette, men det er ikke alle som inkluderer dette i beskrivelsen av tiltak. Et annet forhold som vi velger å nevne her, er at fylkeskommunenes arbeid for å øke antall læreplasser pågår kontinuerlig. Fylkeskommunene har «en stor vifte av tiltak», og disse kan pågå over tid, slik en informant selv sier det. Vi tolker dette slik at det kan være vanskelig for fylkeskommunene å avgrense aktuelle tiltak for denne perioden (2022--2023). Videre må vi understreke at hvilke tiltak som trekkes fram av fylkeskommunene for deling i denne rapporten ikke representerer en fullstendig oversikt, men er noen eksempler på tiltak de har satt i gang. Fem av de elleve fylkeskommunene har valgt å svare kort og lite utfyllende på spørsmålene.
+
+I årets spørringer har vi valgt å gruppere like tiltak i seks punkter og nedenfor beskriver vi noe mer utfyllende hva fylkeskommunene legger i tiltakene som inngår under hvert punkt (6.3.1--6.3.6). Vi har trukket inn noen sitater for å eksemplifisere tiltakene.
+
+### Samhandling og systematisk dialog med aktører i skole og arbeidsliv{#sec-sec6.3.1}
+
+Tett samarbeid mellom de ulike aktørene i arbeidet med å skaffe elever læreplass nevnes som et tiltak av flere fylkeskommuner. Aktørene i samarbeidet kan være fylkeskommunene, skoler, opplæringskontor og bedrifter. En fylkeskommune understreker at for å skaffe nye læreplasser, så må samhandling mellom skole, opplæringskontor og fagopplæring fungere godt. Fylkeskommunen har jobbet for å etablere en kultur for å møtes og ha en dialog:
+
+> Handler rett og slett om samhandling mellom skole, opplæringskontor og fagopplæring -- den samhandlingen der og \[det å\] etablere den kulturen for tettere kontakt har fungert veldig godt. Og det handler også om at behovet er stort i arbeidslivet.
+
+Denne fylkeskommunen ser at de har fått drahjelp av gode konjunkturer i arbeidsmarkedet i arbeidet med å etablere gode møteplasser mellom aktørene både på skolene, i opplæringskontorene og i bedriftene. De viser til at samarbeidet har gitt resultater i og med at det har vært en økning på 20 prosent i lærekontrakter de siste to årene.
+
+Noen fylkeskommuner trekker fram viktige aktører, for eksempel samarbeidet med yrkesopplæringsnemda eller med kommunene. Blant annet nevnes det at samarbeidet med kommunene er vesentlig fordi fylkeskommunene trenger godt med læreplasser på kommunale arbeidsplasser. Her refereres det trolig til noen av fagene vi nevnte ovenfor, og at det er utfordrende å rekruttere nok læreplasser i helsearbeiderfaget og barne- og ungdomsarbeiderfaget. En fylkeskommune nevner at samarbeidet med partene i arbeidslivet og opplæringskontorene er viktig:
+
+> Opplæringskontorene er kjempeviktige -- det er bare å si dette høyt og tydelig nå som det vurderes å endre deres rolle i opplæringsloven.
+
+Her viser informanten til at opplæringskontorenes rolle som lærebedrift har vært diskutert etter at det i forslaget til ny opplæringslov ble foreslått å endre rollen til et samarbeidsorgan for lærebedrifter. Et annet tiltak samme fylkeskommune refererer til er regionale utvalg under yrkesopplæringsnemdene. Disse utvalgene kan jobbe direkte med tiltak som passer i den enkelte region.
+
+Oppsummert ser vi at fylkeskommunene beskriver at de jobber med å skape møteplasser for erfaringsdeling og relasjonsbygging, som er et sentralt tiltak i Samfunnskontrakten.
+
+### Tiltak for lærlinger som står i fare for å ikke få læreplass{#sec-sec6.3.2}
+
+Som nevnt ovenfor, er det i samfunnskontrakten et mål at partene skal jobbe for å motvirke diskriminering i rekruttering av lærlinger som man forventer vil ha problemer med å få læreplass.[\[11\]](#_ftn11) Fylkeskommunene har innrettet ulike tiltak for denne målgruppen. En fylkeskommune nevner at de har innført *rask avklaring av tilretteleggingsmidler* for lærlinger med behov for tilrettelegging. De beskriver at de har etablert et tiltaksteam som har jobbet med denne avklaringen slik at det skal være høy forutsigbarhet for bedrifter i hva som forventes av tilrettelegging overfor lærlinger med spesielle behov.
+
+Andre eksempler på tiltak er *tilskuddsløsninger*, både for oppfølging av lærlinger og lærekandidater med spesielle behov og for lærlinger og lærekandidater med kort botid. En fylkeskommune oppgir at de har satt av midler som opplæringskontor, kommuner og bedrifter kan søke på for å ta inn en lærling de kanskje ikke ville tatt inn uten ekstra midler, og de viser til at noen lærlinger krever ekstra oppfølging etter pandemien.
+
+En fylkeskommune opplever at de viktigste tiltakene nettopp handler om hvordan elever som står i fare for å ikke få læreplass kan følges opp:
+
+> Sånn at de tiltakene vi har er mer rettet mot de som står i fare for å ikke få læreplass. I fjor fikk vi ekstramidler fra Udir i forhold til å følge opp de som vi tidlig ser vil stå i fare for å ikke få læreplass, og her har vi satt i gang ganske mange tiltak lokalt på skolene våre og da ekstra oppfølging av de som vil stå uten læreplass etter sommeren. Det vil si ekstra satsning på alternativt vg3 i skole. Så det er de tiltakene vi har prioritert.
+
+I likhet med fylkeskommunen sitert ovenfor, nevner noen andre fylkeskommuner at de har brukt midler til å *styrke tilbudet av Vg3 i skole*, slik at det skal bli et bedre alternativt tilbud.
+
+Tiltak for å bedre overgangen mellom grunnskole og videregående skole, følge opp sårbare elever på vg1 og ekstra oppfølging og veiledning i YFF trekkes fram for å kvalifisere flere søkere til læreplass. Til sist under denne grupperingen nevner vi at fylkeskommunene har tiltak for å styrke elevenes språkopplæring og de prøver ut digitale opplæringsløsninger, for eksempel alternativ opplæringsmodell med digitalt supplerende programfagsundervisning i utdanningsprogrammet Restaurant- og matfag.
+
+### Læreplassgaranti{#sec-sec6.3.3}
+
+Regjeringen har signalisert i fullføringsreformen at den vil innføre en rett til læreplass eller et likeverdig tilbud.[\[12\]](#_ftn12) Med dette menes at søkere som ikke får læreplass skal få et likeverdig tilbud som sikrer progresjon i opplæringsløpet. Partene i arbeidslivet har vært skeptiske til å innføre læreplassgarantier eller andre likeverdige tilbud basert på skoleopplæring og det er tidligere konkludert med at en slik garanti vil oppleves som en urimelig inngripende situasjon for bedriftene.[\[13\]](#_ftn13)
+
+Noen av fylkeskommunene nevner likevel at de har innført *læreplassgaranti* etter politiske vedtak i fylket. Vi har lite utfyllende informasjon om hva læreplassgarantien innebærer og hvem den gjelder for, men forstår at garantien gjelder ikke for alle, kun for noen utdanningsprogram og innenfor gitte kriterier. Et fylke nevner at fra
+
+> våren 2024 skal elever fra bygg- og anleggsteknikk, helse- og oppvekstfag og elektrofag og de som velger kjøretøyfag høsten 2023 være garantert læreplass. Dette jobbes det svært godt med.
+
+Tre andre fylkeskommuner uttrykker skepsis til læreplassgarantier, blant annet fordi tilgangen på læreplasser henger sammen med konjunktursvingninger og fordi garantiene er fulle av forbehold, og derfor ikke vil hjelpe gruppen som vanligvis står i fare for å ikke få læreplass.
+
+### Læreplassregnskap og helhetlige yrkesfaglige utdanningsløp{#sec-sec6.3.4}
+
+Flere tiltak nevnes for å kunne følge opp elevene mer systematisk gjennom opplæringsløpet for å forberede og kvalifisere elevene bedre for overgangen til arbeidslivet som lærlinger. Tre fylkeskommuner nevner *læreplassregnskap* som et tiltak som er etablert eller som skal innføres. Dette er Nordland, Rogaland og Innlandet fylkeskommuner.[\[14\]](#_ftn14) Læreplassregnskap ble introdusert av Hordaland fylkeskommune i et prosjekt for å få flere elever ut i lære og bedre gjennomføringen i videregående skole.[\[15\]](#_ftn15) Slik vi forstår det, innebærer et læreplassregnskap at det lages en systematisk oversikt på den ene siden over bedriftsnettverket til skolen og samarbeidsavtaler som er inngått med bedriftene, og på den andre siden viser læreplassregnskapet elevenes progresjon i utdanningsløpet gjennom å kartlegge karriere-/yrkesinteresser, praksis i YFF, søknad til læreplass og innvilget læreplass. Regnskapet gir også oversikt over de som kan komme til å ha problemer med å få læreplass.
+
+En av fylkeskommunene viser til at læreplassregnskapet bidrar til at man får kartlagt alle elevene og at man tydeligere ser hvem som kan få utfordringer. I tillegg får man klargjort kartlegging og formidling tidligere, slik at det som før ble gjort på høsten, nå kan gjøres på våren.
+
+Et annet tiltak under dette punktet er hva en fylkeskommune nevner som *en modell for helhetlige yrkesfaglige utdanningsløp*. I modellen skal skolene
+
+> ha sluttkompetansen i sikte fra dag 1, når man begynner på Vg1 ... Det betyr at skolene har ansvaret for å tenke næringsrettet rundt elevene sine fra det øyeblikket de får de inn, sånn at man unngår vg3 i skole.  Så det blir en helt ny måte å tenke på og det stimulerer også dette med nye læreplasser og det kobler også skole og næring bedre sammen.
+
+Av andre tiltak som trekkes fram for å skape helhetlige løp, nevner vi *Læringsfabrikken*, der skole og industri knyttes tettere sammen og andre enkeltprosjekter på skoler i utdanningsprogrammer som har hatt problemer med å få nok læreplasser. I sistnevnte prosjekt prøver fylkeskommunen blant annet ut tidligere veksling der lærekontrakt tegnes allerede halvveis i Vg1. Fylkeskommunen viser til at de prøver å sette inn flere tiltak i forkant og ikke reparere i etterkant, når de ser at de får elever med få grunnskolepoeng eller elever som står i fare for å droppe ut av opplæringen. Det vises til at disse enkeltprosjektene har fungert «særdeles» godt i dette fylket.
+
+Til sammen viser disse eksemplene på fylkeskommunenes tiltak til at opplæringen i skole brukes strategisk for å forberede elevene på læretiden og for å etablere kontakt med mulige lærebedrifter.
+
+### Nye roller i formidlingsarbeidet{#sec-sec6.3.5}
+
+Fem av fylkeskommunene nevner at de har finansiert opprettelsen av nye stillinger. Disse stillingene har en sentral rolle i formidlingsarbeidet til læreplass ved skolene. Stillingene beskrives med ulike benevnelser, blant annet *yrkesfagmotivator*, *rådgiver* *formidling*, *formidlingskoordinator* og *læreplasskoordinator*. En fylkeskommune beskriver at læreplasskoordinatoren har spesiell oppmerksomhet på de elevene som man forventer vil få problemer med å skaffe læreplass til. I denne fylkeskommunen kan stillingen sees i sammenheng med læreplassregnskapet, siden koordinatoren har ansvar for å føre dette. Selv om det er for tidlig å se gode effekter viser representanten fra fylkeskommunen til at:
+
+> Det har en effekt -- at det er ressurser i skolen til å jobbe tettere på for å i større grad være mer målrettet med hvilken bedrift som passer en elev.
+
+Videre beskriver fylkeskommunen at dette tiltaket har fått god respons ved skolene, selv om opplæringskontorene var noe tilbakeholdne i starten.
+
+En annen fylkeskommune beskriver at formidlingskoordinatorens rolle har vært «ganske avgjørende» i formidlingsarbeidet, og at den har en sterk rolle på alle videregående skoler der den er etablert.
+
+### Rekrutteringsarbeid for nye læreplasser{#sec-sec6.3.6}
+
+Det siste vi nevner er tiltak som fylkeskommunene har for å rekruttere nye lærebedrifter. Enkelte har innført stimuleringstilskudd til bedrifter med nye læreplasser gjennom midlene som har kommet fra Utdanningsdirektoratet. Rekrutteringskampanjer nevnes også som et viktig tiltak, og her trekkes tiltaket *Læreplassjeger* inn med profilering og reklame. Den nasjonale *Læreplassjeger*-kampanjen var i 2022 et samarbeid mellom fire fylkeskommuner, organisasjoner og Wold Skills Norway for å rekruttere flere lærebedrifter og læreplasser.[\[16\]](#_ftn16) I kampanjen utarbeides det felles informasjonsmateriell til bedrifter, læreplassjegere tar direkte kontakt med bedrifter og sosiale medier og andre kommunikasjonskanaler brukes i arbeidet.
+
+Fylkeskommuner kan ha egne markedsføringskampanjer og en nevner dette spesifikt, blant annet brukes reklame på busser og alle andre kommunikasjonsmiddel hvert år. Effekten av denne kampanjen er vanskelig å måle, men fylkeskommunen har et framtidig stort behov for faglært arbeidskraft og påpeker at den ikke mangler læreplasser, men lærlinger.
+
+## Oppsummering{#sec-sec6_4}
+
+Dette kapitlet har omhandlet fylkeskommunenes vurdering av tilgangen på læreplasser, særskilte lærefag det vurderes som vanskelig å skaffe læreplasser i og til sist hvilke tiltak fylkeskommunen har for å skaffe nye læreplasser. Tiltakene viser til eksempler som fylkeskommunene trekker fram i arbeidet sitt, og gir ikke en utfyllende oversikt. For å få et mer helhetlig bilde av tiltak for å skaffe flere læreplasser og kvalifisere elever til læretiden, bør kartleggingsarbeidet i Spørringene suppleres med andre undersøkelser. Oppsummert fant vi følgende:
+
+::: {.callout-tip title="Oppsummert"}
+
+-   Alle fylkeskommunene slutter seg til utsagnet om at de fleste kvalifiserte søkere vil få læreplass. Ni av elleve fylkeskommuner svarer at det passer svært godt.
+
+-   Samtlige fylkeskommunene mener at det passer godt at de klarer å skaffe søkere med opplæringsrett læreplass. Tre oppgir at det passer svært godt, mens flertallet på åtte oppgir at det passer ganske godt.
+
+-   Ingen av fylkeskommunene oppgir at de er svært bekymret for situasjonen til elever som søker læreplass. Ti av elleve svarer at denne påstanden passer dårlig.
+
+-   Et stort flertall av fylkeskommunene vurderer at det passer dårlig at lærebedriftene ser det som aktuelt å si opp eller ta inn færre lærlinger
+
+-   I år som i fjor kan det se ut til at det er utfordrende å skaffe læreplasser i helsearbeiderfaget, barne- og ungdomsarbeiderfaget og elektrikerfaget. I tillegg oppgis nye fag innenfor utdanningsprogrammet Informasjonsteknologi og medieproduksjon
+
+-   Fylkeskommunene har svært mange ulike tiltak for å øke tilgangen på læreplasser og for å kvalifisere elever til læretiden. Vi har gruppert tiltakene som fylkeskommunene har trukket fram under seks punkter. Disse er *samhandling og systematisk dialog mellom aktører i skole og arbeidsliv*, *tiltak for lærlinger som står i fare for å ikke få læreplass*, *læreplassgaranti*, *læreplassregnskap og helhetlige yrkesfaglige utdanningsløp*, *nye roller i formidlingsarbeidet* og *rekrutteringsarbeid for nye læreplasser*.
+:::
