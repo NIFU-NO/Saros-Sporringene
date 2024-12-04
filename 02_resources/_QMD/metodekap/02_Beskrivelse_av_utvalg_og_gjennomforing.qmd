@@ -1,0 +1,283 @@
+---
+format:
+  html: default
+  nifudocx-docx: 
+    callout-icon: false
+    fig-width: 6.1
+execute: 
+  echo: false
+  warning: false
+author: 
+  - "Torstein de Besche"
+  - "Karl S. Vika"
+  - "Stephan Daus"
+number-sections: true
+number-offset: 1
+toc: true
+toc-depth: 4
+fig-dpi: 500
+---
+
+# Beskrivelse av utvalg og gjennomføring
+
+```{r}
+#| include: false
+params <- list(cycle = "2023H",
+               nummer_i_rekken = "trettien",
+               gjennomforing = "høsten 2023",
+               datefrom = "21. september",
+               dateto = "30. oktober")
+kapittel_mappe <- "02_Beskrivelse_av_utvalg_og_gjennomforing"
+
+source("../../general_formatting.R")
+source(file.path(kapittel_mappe, "2_0_stibaner.R"))
+source(file.path(kapittel_mappe, "2_1_funksjoner.R"))
+source(file.path(kapittel_mappe, "2_2_tabeller.R"))
+source(file.path(kapittel_mappe, "2_3_kart.R"))
+source(file.path(kapittel_mappe, "2_4_tekstbiter.R"))
+```
+
+## Utvalgstrekking
+
+Utdanningsdirektoratets spørringer gjennomføres som regel to ganger hvert år. For å redusere belastningen på sektoren er undersøkelsen organisert som en utvalgsundersøkelse. Siden det har skjedd endringer i kommunestrukturen og skoler slås sammen, legges ned og opprettes ble utvalgene trukket på nytt i 2023. Grunnskolene er delt inn i tre utvalg, mens videregående skoler og kommuner er fordelt på to. Skoleledere i grunnskolen mottar normalt ikke undersøkelsen oftere enn hvert halvannet år, mens skoleledere i videregående og skoleeier kommune får undersøkelsen en gang i året. Fylkeskommunene, og Oslo som skoleeier for grunnskolen deltar i undersøkelsen hver gang.
+
+Utvalgene er trukket for å sikre geografisk representativitet og at alle skoletyper skal med i alle utvalg. Grunnskoleutvalgene er trukket tilfeldig til de tre utvalgene, stratifisert etter fylke og skoleslag (rene barneskoler, 1-10. skoler og rene ungdomsskoler). Videregående skoler og kommuner er trukket tilfeldig til to utvalg stratifisert etter fylke. Merk at noen typer skoler på forhånd er tatt ut av populasjonen, og dermed også av utvalget. Dette gjelder 1) skoler for elever med spesielle behov 2) skoler med læreplaner og organisering som skiller seg sterkt fra ordinære skoler, som for eksempel internasjonale skoler, og 3) skoler med svært få elever, det vil si fem eller færre. Det er ved tidligere anledninger forsøkt å invitere slike skoler, men tilbakemeldingene har i de fleste tilfellene vært at spørsmålene i undersøkelsen ikke er relevante.
+
+@fig-2_1 viser den geografiske beliggenheten og spredningen til henholdsvis grunnskoler, videregående skoler og kommuner som ble invitert til å besvare undersøkelsen `r params$gjennomforing`.
+
+```{r}
+#| fig-cap: Den geografiske beliggenheten til inviterte grunnskoler, videregående skoler og kommuner.
+#| label: fig-2_1
+fig_2.1
+```
+
+Når det gjelder fylkeskommunene besvarte `r antall$fyl$godkjent$txt` av `r antall$fyl$pop$txt` denne undersøkelsen. `r if(antall$fyl$noen_svar$n > 0){paste0(antall$fyl$noen_svar_ikke_godkjent$txt, " åpnet undersøkelsen, men hadde for få svar til å bli godkjent.")}` `r if(antall$fyl$ikke_svart$n > 0){paste0(antall$fyl$ikke_svart$txt, " åpnet ikke undersøkelsen.")}`
+
+## Overordnet om bakgrunnsvariabler
+
+Som nevnt er dette hovedsakelig en deskriptiv rapport hvor vi undersøker forskjeller mellom respondenter basert på ulike bakgrunnsvariabler eller kjennetegn. Alle spørsmålene krysses med respondentgruppene, som består av `r respondent_grupper`. Videre undersøkes svarfordelingen til hver respondentgruppe på ulike bakgrunnsvariabler, som vist i @tbl-2.1.
+
+*Firedelt skoletype* er svarfordelingen fordelt på barneskoler, ungdomsskoler, 1--10-skoler og videregående skoler. *Femdelt skoletype* skiller i tillegg ut barneskoler som kun har 1.-4. trinn, men denne bakgrunnsvariabelen rapporteres det sjeldent på fordi gruppen er så liten. Videre har vi *grunnskolestørrelse*, som deler grunnskolene inn i tre størrelser: under 100 elever, mellom 100 og 299 elever, og over 300 elever. Vi har to bakgrunnsvariabler som gjelder bare for videregående. *type videregående* er svarene fordelt på skoler som kun har studieforberedende utdanningsprogram, har både studieforberedende- og yrkesfaglige utdanningsprogram, og skoler som bare har yrkesfaglige utdanningsprogram. Den andre variabelen er *videregåendestørrelse*, som skiller mellom skoler med under 250 elever, mellom 250 og 599 elever, og over 600 elever. Den siste skolerelaterte variabelen er *skolestørrelse*. Her deles skolene inn i de minste, de mellomste og de største, basert på de respektive skolestørrelsesvariablene for grunnskoler og videregående. Altså vil gruppen av de minste skolene bestå av grunnskoler med mindre enn 100 elever og videregående skoler med mindre enn 250 elever.
+
+Når det gjelder geografiske kjennetegn har vi for det første *landsdel*. For å beholde historikken, og unngå for store geografiske områder, har vi valgt å fortsatt ta utgangspunkt i fylkene før regionreformen i 2020. De ulike landsdelene består av følgende tidligere fylker: *Oslo-området:* Oslo og Akershus, *Øst-Norge:* Østfold, Hedmark, Oppland, Buskerud, Vestfold og Telemark, *Sør- og Vest-Norge:* Aust-Agder, Vest-Agder, Rogaland, Hordaland, Sogn og Fjordane og Møre og Romsdal, *Midt- og Nord-Norge:* Trøndelag, Nordland, Troms og Finnmark.
+
+For det andre undersøkes variasjoner fordelt på fylkene etter regionsreformen. For grunnskoler, videregående skoler og kommuner ser vi også på forskjeller mellom kommuner, og skoler i kommuner av ulik størrelse. Kommunene deles inn i tre kategorier: mindre enn 3 000 innbyggere, mellom 3 000 og 9 999 innbyggere, og 10 000 eller flere innbyggere.
+
+Til slutt ser vi på forskjeller mellom kommuner av ulik *sentralitet*, og på skoler som ligger i kommuner med ulik sentralitet. Sentralitetsindeksen er hentet fra Statistisk sentralbyrå (SSB). Dette er en indeks som klassifiserer kommuner etter tilgangen på arbeidsplasser og servicefunksjoner, hvor høyere verdier indikerer høyere sentralitet. SSB har i utgangspunktet delt kommunene inn i seks intervaller, hvor intervallene ble laget slik at det ikke skulle bli for få innbyggere i en enkelt gruppe. For å presentere mer oversiktlige tabeller og figurer har vi slått sammen intervallene til tre kategorier: mest sentrale, mellomsentrale og minst sentrale.
+
+
+| Tema                   | Grunnskole | Videregående | Kommune | Fylkeskommune |
+|------------------------|------------|--------------|---------|---------------|
+| Respondenttype         | X          | X            | X       | X             |
+| Skoletype 4-delt       | X          | X            |         |               |
+| Skoletype 5-delt       | X          | X            |         |               |
+| Størrelse grunnskole   | X          |              |         |               |
+| Type videregående      |            | X            |         |               |
+| Størrelse videregående |            | X            |         |               |
+| Skolestørrelse         | X          | X            |         |               |
+| Landsdel               | X          | X            | X       | X             |
+| Fylke                  | X          | X            | X       |               |
+| Kommunestørrelse       | X          | X            | X       |               |
+| Sentralitetsindeks     | X          | X            | X       |               |
+
+: Bakgrunnsvariabler for respondentgruppene {#tbl-2.1}
+
+## Overordnet om antall respondenter og svarprosent
+
+@tbl-2.2 viser bruttoutvalg og status fordelt på respondentgruppene `r respondent_grupper``. Kategorien *godkjent* henviser her til de respondentene som har gjennomført hele undersøkelsen. *Godkjent -- noen svar* henviser til respondenter som ikke har fullført, men svart på minst 30 prosent av spørsmålene i sin gruppe. *Ikke godkjent -- noen svar* er dermed de respondentene som har svart på mindre enn 30 prosent. Disse tas ut av datamaterialet for å unngå at eksempelvis respondenter som kun klikker seg gjennom de første sidene uten å besvare undersøkelsen inkluderes, og for å unngå en kunstig høy svarprosent. Den nest siste kategorien består av dem som *ikke har svart*. Kategorien *frafalt* henviser til de respondentene som aktivt har gitt beskjed om at de ikke ønsker eller har anledning til å svare.
+
+```{r}
+#| tbl-cap: Bruttoutvalg og status etter respondentgruppe, antall
+#| label: tbl-2.2
+tbl_2.2
+```
+
+For å gi et bilde av gruppen *ikke godkjent -- noen svar* viser @tbl-2.3 maksimalt antall svar for hver respondentgruppe, samt gjennomsnitt og median for både ekskluderte og inkluderte respondenter.
+
+```{r}
+#| tbl-cap: Sammenlikning, godkjente og ikke godkjente svar
+#| label: tbl-2.3
+tbl_2.3
+```
+
+Tabellen viser at respondentene som ikke ble godkjent har avgitt svært få svar sammenliknet med gjennomsnittet for de som ble godkjent i sin gruppe. Videre viser analyser at det ikke er noe systematikk i hvor disse avslutter undersøkelsen. Det er rimelig å anta at resultatene ikke ville blitt endret ved en eventuell inklusjon.
+
+Endelig svarprosent relatert til bruttoutvalg og populasjon er vist i @tbl-2.4. Populasjonstallene for grunnskoler, videregående skoler og kommuner er hentet fra Nasjonalt skoleregister (NSR).
+
+```{r}
+#| tbl-cap: Bruttoutvalg, populasjon (antall) og svarprosent
+#| label: tbl-2.4
+tbl_2.4
+```
+
+## Grunnskoleutvalget: `r svarprosent$gs` prosent deltakelse
+
+Fra en populasjon på `r antall$gs$pop$txt` ordinære grunnskoler ble `r antall$gs$utvalg$txt` invitert til å besvare undersøkelsen. Av disse gjennomførte `r antall$gs$gjennomført$txt` hele undersøkelsen, mens `r antall$gs$noen_svar$txt` besvarte deler av den. Av de som delvis besvarte undersøkelsen hadde `r antall$gs$noen_svar_godkjent$txt` nok svar til å bli inkludert. Dermed blir det totale antallet grunnskoler i undersøkelsen `r antall$gs$godkjent$txt`. Det er `r antall$gs$ikke_svart$txt` som ikke har åpnet eller svart på undersøkelsen, mens `r antall$gs$frafalt$txt` skoleledere aktivt ga beskjed om at de ikke ønsket å delta.
+
+Svarprosenten for denne gruppen har vært varierende de siste årene. Før pandemien deltok rundt 55 prosent av grunnskolene. Undersøkelsene gjennomført under pandemien må ses på som unntak, hvor vi både hadde gjennomføringer med unormalt høy og lav deltakelse. Etter pandemien har deltakelsen blant grunnskoler stabilisert seg på under 45 prosent. Denne gjennomføringen har `r if(svarprosent$gs > 46) "en noe høyere" else if(svarprosent$gs < 44) "en noe lavere" else "samme"` deltakelse (`r svarprosent$gs` prosent) sammenlignet med de foregående`r if(svarprosent$gs < 60) ", men vi skulle gjerne sett at flere grunnskoler deltar. Det ville gjort funnene i denne rapporten sikrere"`.
+
+@tbl-2.5 viser hvordan utvalget var sammensatt etter fylke, populasjon, bruttoutvalg og hvilken svarprosent som ble oppnådd. Svarprosenten varierer noe mellom fylkene (se også @fig-2_2). Den høyeste svarprosenten finner vi i `r ranger2(tbl_2.5, "Svarprosent", "Fylke")$høy`. Lavest svarprosent finner vi i `r ranger2(tbl_2.5, "Svarprosent", "Fylke")$lav`. For øvrig er deltakelsen over 45 prosent for samtlige fylker. 
+
+```{r}
+#| tbl-cap: Populasjon, bruttoutvalg (antall) og svarprosent grunnskoler etter fylke
+#| label: tbl-2.5
+tbl_2.5 
+```
+
+
+
+```{r}
+#| fig-cap: Svarprosent grunnskoler etter fylke, antall i utvalget vist per fylke
+#| label: fig-2_2
+fig_2.2
+```
+
+I @tbl-2.6 og @tbl-2.7 vises svarprosent for grunnskolene sortert på henholdsvis landsdel og skoletype, og landsdel og skolestørrelse. @tbl-2.6 viser at svarprosenten totalt sett er relativ lik mellom barneskoler, 1--10-skoler og ungdomsskoler ([`r paste0( range(as.matrix(tbl_2.6[tbl_2.6$Landsdel == "Totalt", -c(1,4)]), na.rm=TRUE), collapse='-')`]). Når det gjelder landsdel totalt er svarprosenten høyest blant `r ranger2(tbl_2.6, c("Barneskole", "Ungdomsskole", "1-10 skole"), "Landsdel")$høy`. Svarprosenten er klart lavest blant `r ranger2(tbl_2.6, c("Barneskole", "Ungdomsskole", "1-10 skole"), "Landsdel")$lav`.
+
+```{r}
+#| tbl-cap: Svarprosent grunnskole etter landsdel og skoletype
+#| label: tbl-2.6
+tbl_2.6
+```
+
+@tbl-2.7 viser videre at deltakelsen er noe lavere blant de minste og mellomstore skolene i forbindelse med denne gjennomføringen, sammenlignet med de største skolene. Dette hovedbildet gjelder også innad i de fleste landsdeler. Unntak er Oslo-Området, med høy svarprosent for skoler med mer enn 100 elever.
+
+```{r}
+#| tbl-cap: Svarprosent grunnskole etter landsdel og skolestørrelse
+#| label: tbl-2.7
+tbl_2.7
+```
+
+@tbl-2.8 og @tbl-2.9 viser hvordan nettoutvalget, altså de grunnskolene som har deltatt i undersøkelsen, er sammensatt etter landsdel, skoletype og skolestørrelse, sammenliknet med populasjonen av grunnskoler.
+
+```{r}
+#| tbl-cap: Sammensetning av nettoutvalg grunnskoler etter landsdel og skoletype sammenliknet med populasjonen
+#| label: tbl-2.8
+tbl_2.8
+```
+
+@tbl-2.8 viser at det generelt er små forskjeller mellom nettoutvalget og populasjonen når vi ser på totalen for den enkelte skoletype. Forskjellen er på mindre enn 1 prosentpoeng for alle skoletyper. Ser vi på landsdel er også forskjellene generelt små. Det er en liten underrepresentasjon av grunnskoler fra Midt- og Nord-Norge på `r abs(min(tbl_2.8[["_data"]][["Totalt_Utvalg %"]]-tbl_2.8[["_data"]][["Totalt_Pop. %"]]))` prosentpoeng. Det er en liten overrepresentasjon av grunnskoler fra Oslo-området på `r abs(max(tbl_2.8[["_data"]][["Totalt_Utvalg %"]]-tbl_2.8[["_data"]][["Totalt_Pop. %"]]))`. Alt i alt er det svært små forskjeller innad i hver landsdel mellom utvalg og populasjon.
+
+```{r}
+#| tbl-cap: Sammensetning av nettoutvalg grunnskoler etter landsdel og skolestørrelse sammenliknet med populasjonen
+#| label: tbl-2.9
+tbl_2.9
+```
+
+Når det gjelder skolestørrelse viser @tbl-2.9 at deltakelsen er svært nær det vi finner i populasjonen. Det største avviket vi finner er for skoler med mindre enn 100 elever, som har en underrepresentasjon på 4,2 prosentpoeng.
+
+@tbl-2.10 indikerer at fordelingen i nettoutvalget mellom offentlig og privat eierskap og målform korresponderer godt med fordelingen i populasjonen.
+
+```{r}
+#| tbl-cap: Sammensetning av nettoutvalg grunnskoler etter eierskap og målform
+#| label: tbl-2.10
+tbl_2.10
+```
+
+## Videregåendeutvalget: `r svarprosent$vgs` prosent deltakelse
+
+I utgangspunktet ble `r antall$vgs$utvalg$txt` videregående skoler invitert til undersøkelsen. Utvalget er hentet fra en populasjon bestående av `r antall$vgs$pop$txt` skoler. Totalt `r antall$vgs$godkjent$txt` besvarelser ble godkjent, `r antall$vgs$ikke_godkjent$txt` skoler svarte ikke på undersøkelsen eller hadde for få svar, og ingen oppga at de ikke ønsket å delta. Dette gir en svarprosent på `r svarprosent$vgs`. Med noen få unntak under pandemien har svarprosenten variert mellom 60 og 65 prosent siden 2018. Svarprosenten ved denne gjennomføringen er altså litt høyere enn det vi vanligvis oppnår.
+
+@tbl-2.11 oppsummerer populasjonen og utvalget sortert på fylke samt hvilken svarprosent som ble oppnådd.
+
+```{r}
+#| tbl-cap: Populasjon, bruttoutvalg (antall) og svarprosent videregående skoler etter fylke
+#| label: tbl-2.11
+tbl_2.11
+```
+
+Svarprosenten for de videregående skolene varierer betydelig mellom fylkene (se også @fig-2_3). Samtlige fylker, med unntak av Innlandet, har en deltakelse på minst `r min(tbl_2.11$Svarprosent)` prosent. `r if(min(tbl_2.11$Svarprosent)>50) "Dette er høyt." else "Dette er akseptabelt."` Lavest svarprosent fant vi i `r ranger2(tbl_2.11, "Svarprosent", "Fylke")$lav`, mens den var høyest i `r ranger2(tbl_2.11, "Svarprosent", "Fylke")$høy`.
+
+```{r}
+#| fig-cap: Svarprosent videregående skoler etter fylke samt antall vgs i utvalget per fylke
+#| label: fig-2_3
+fig_2.3
+```
+
+@tbl-2.12 viser at forskjellene mellom populasjon og utvalg for de tre ulike typene videregående skoler er liten. Det samme gjelder landsdel der forskjellene kun er innenfor et prosentpoeng.
+
+```{r}
+#| tbl-cap: Sammensetning av nettoutvalg videregående skole etter landsdel og skoletype sammenliknet med populasjonen
+#| label: tbl-2.12
+tbl_2.12
+```
+
+@tbl-2.13 viser at det er små avvik mellom utvalg og populasjon når det gjelder skolestørrelse. Skolene med mellom 250 og 599 elever er svakt overrepresentert, mens skolene med mer enn 600 elever svakt underrepresentert. Ser vi innad i landsdelene er imidlertid ikke avvikene særlig store.
+
+```{r}
+#| tbl-cap: Sammensetning av nettoutvalg videregående etter landsdel og skolestørrelse sammenliknet med populasjonen
+#| label: tbl-2.13
+tbl_2.13
+```
+
+@tbl-2.14 indikerer at fordelingen i nettoutvalget når det gjelder offentlig og privat eierskap korresponderer ganske godt med fordelingen i populasjonen. Vi finner relativt små forskjeller i representativitet mellom offentlige og private, og mellom bokmålsskoler og nynorskskoler.
+
+```{r}
+#| tbl-cap: Sammensetning av nettoutvalg videregående skoler etter organisering og målform
+#| label: tbl-2.14
+tbl_2.14
+```
+
+## Kommuneutvalget: `r svarprosent$kom` prosent deltakelse
+
+Det var totalt `r antall$kom$utvalg$txt` inviterte kommuner i vårens spørring, hvorav `r antall$kom$godkjent$txt` besvarte undersøkelsen helt eller delvis. Dette gir en deltakelse på `r svarprosent$kom` prosent. Tidligere år har svarprosent vært på rundt 60, med unntak av ekstraspørringen om koronasituasjonen. Dette er med andre ord litt mindre deltakelse enn hva vi normalt oppnår. Totalt `r antall$kom$noen_svar$txt` kommuner besvarte deler av undersøkelsen, men `r antall$kom$noen_svar_ikke_godkjent$txt` av disse svarte på for få spørsmål til å inkluderes.
+
+```{r}
+#| tbl-cap: Populasjon, bruttoutvalg (antall) og svarprosent kommuner etter fylke
+#| label: tbl-2.15
+tbl_2.15
+```
+
+@tbl-2.15 viser hvordan utvalget var sammensatt etter fylke, populasjon, bruttoutvalg og hvilken svarprosent som ble oppnådd. I nesten samtlige fylker har over 50 prosent av de inviterte kommunene svart. `r ranger2(tbl_2.15, "Svarprosent", "Fylke")$lav` skiller seg ut med en deltakelse på under 50 prosentpoeng (se også @fig-2_4).
+
+```{r}
+#| fig-cap: Svarprosent kommuner etter fylke, antall i utvalget vist per fylke
+#| label: fig-2_4
+fig_2.4
+```
+
+@tbl-2.16 viser at svarprosenten varierer noe etter kommunestørrelse og landsdel, med unntak av `r ranger2(tbl_2.16, c("Under 5000", "5000 til 19 999", "Mer enn 20 000"), "Landsdel")$høy` som har en klart høyere deltakelse. Innad i landsdelen er det særlig de minste kommunene i Midt- og Nord-Norge og Sør- og Vest-Norge som peker seg ut med særlig lav deltakelse, fulgt av de største kommunene i Midt- og Nord-Norge.
+
+<!-- og `r ranger2(tbl_2.16, c("Under 5000", "5000 til 19 999", "Mer enn 20 000"), "Landsdel")$lav` (Oslo-området har ingen kommuner under 5000 innbyggere).  -->
+
+```{r}
+#| tbl-cap: Svarprosent kommuner etter landsdel og innbyggertall
+#| label: tbl-2.16
+tbl_2.16
+```
+
+@tbl-2.17 viser landsdel og innbyggertall for kommunene som deltok i undersøkelsen (nettoutvalget) sammenliknet med alle kommuner i Norge (populasjonen). Fordelingen av kommunene som har besvart undersøkelsen avviker lite fra det vi finner i populasjonen. Ser vi på totalen for landsdelene, er forskjellene svært små. Det største avviket er en underrepresentasjon av kommuner i Midt- og Nord-Norge på 7 prosentpoeng. Innad i landsdelene er de fleste forskjellene mellom utvalg og populasjon på mindre enn tre prosentpoeng. Forskjellene er større blant de minste kommunene i Midt- og Nord-Norge.
+
+```{r}
+#| tbl-cap: Sammensetning av nettoutvalg kommuner etter landsdel og innbyggertall sammenliknet med populasjonen
+#| label: tbl-2.17
+tbl_2.17
+```
+
+## Representativitet og gjennomføring
+
+Spørringene ble gjennomført i perioden `r params$datefrom` til `r params$dateto`. Undersøkelsen ble distribuert elektronisk til alle de fire målgruppene, og det ble gitt i alt fire purringer, omtrent én per uke. Vi har ikke fått henvendelser om tekniske problemer i forbindelse med gjennomføringen.
+
+Spørreskjemaet ble utarbeidet i et samarbeid mellom Utdanningsdirektoratet og NIFU. Utdanningsdirektoratet utarbeidet førsteutkast. NIFU kom med forslag til endringer knyttet til *utformingen* av spørsmålene, men lot det i hovedsak være opp til oppdragsgiver selv bestemme *innholdet* i disse. Spørsmålene ble også pilotert og gjennomgått av en referansegruppe bestående av representanter fra målgruppene.
+
+Svarprosentene er også ved denne gjennomføringen noe lavere blant skoleledere i grunnskolen enn det som har blitt oppnådd i tidligere gjennomføringer før pandemien. For videregående skoler og kommuner er det noe variasjon i svarprosent mellom grupper. Her er imidlertid en viktig faktor at enkelte grupper, særlig når det brytes ned på fylkesnivå, er relativt små, slik at deltakelsen til den enkelte kommune og videregående skole kan påvirke svarprosenten mye. Sammenlikninger mellom utvalg og populasjon avslørte samlet sett ingen alvorlige avvik. Vi vurderer derfor representativiteten som tilstrekkelig god.
+
+Det er også viktig å påpeke at vi ikke kan vite årsakene til at enkelte velger å ikke besvare undersøkelsen, selv om vi gjør analyser av representativitet på utvalgte variabler (som skoletype og kommunestørrelse). I tillegg er det viktig å påpeke at vi bare kan si noe om representativiteten for variabler vi har observert. Dette gjelder utvalgsundersøkelser generelt. Som alltid bør resultatene tolkes med en viss varsomhet.
+
+## Hvem svarer på undersøkelsen?
+
+For å få mer kunnskap om hvem som besvarte undersøkelsen, ba vi skolelederne og skoleeierne oppgi dette. Fordelingen vises i @tbl-2.18. Ved nesten alle grunnskolene og de videregående skolene var rektor involvert i besvarelsen, men en noe større andel av disse delegerer oppgaven med å besvare undersøkelsen ved 1-10 skoler, og særlig på videregående skoler. Ved svært få skoler var inspektør, assisterende rektor og avdelingsleder også med, enten i tillegg til eller i stedet for, rektor. Ved de videregående skoler og ungdomsskoler spiller også avdelingsleder en noe større rolle i utfyllingen enn ved barneskoler og 1-10 skoler. Det at skolene kunne krysse av for mer enn ett alternativ gjør at summen overstiger 100 prosent.
+
+```{r}
+#| tbl-cap: '_Hvem svarer på vegne av skolen? Flere kryss mulig_'
+#| label: tbl-2.18
+tbl_2.18
+```
+
+Liknende spørsmål ble stilt til skoleeierne. I @tbl-2.19 vises hvem som svarer på undersøkelsen på vegne av skoleeierne i (fylkes)kommunen. I kommunene er det først og fremst skolefaglig ansvarlige som har besvart undersøkelsen, mens oppgaven i større grad har blitt utført av seksjonsleder/avdelingsleder i fylkeskommunene. Vi ser at summen av de som har svart overstiger antallet skoleeiere som er med, noe som betyr at mer enn én person er involvert.
+
+```{r}
+#| tbl-cap: _'Hvem svarer på undersøkelsen på vegne av (fylkes)kommunen?'_, flere kryss mulig
+#| label: tbl-2.19
+tbl_2.19
+```

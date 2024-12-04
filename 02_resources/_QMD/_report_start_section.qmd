@@ -1,0 +1,8 @@
+```{{r}}
+#| results: asis
+fs::dir_ls(path = ".", regexp = "\\.qmd", recurse = FALSE, type = "file") |>
+  grep(x=_, pattern = "index\\.qmd|report\\.qmd|/_|_arkiv", value=TRUE, invert=TRUE) |>
+  lapply(X=_, FUN = function(x) knitr::knit_child(x, quiet=TRUE)) |>
+  unlist() |>
+  cat(sep = "\\n")
+```

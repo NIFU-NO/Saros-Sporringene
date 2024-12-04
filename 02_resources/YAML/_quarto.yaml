@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: "_site"
+
+## NB: Folder and file names are case-sensitive!
+
+website:
+  title: "Spørsmål til Skole-Norge"
+  navbar:
+    logo: "https://www.nifu.no/wp-content/uploads/logo_hvit.png"
+    left:
+      - file: "Main/om_historikk.qmd"
+      - file: "Main/om_metode.qmd"
+  sidebar:
+    contents: "Rapporter"
+project_no: '20715'
+funder: Utdanningsdirektoratet
+funder_address: Schweigaards gate 15B, 0191 Oslo
+date-format: DD.MM.YYYY
+figure_table: true
+table_table: true
+report_type: rapport
+
+execute:
+  freeze: auto
+  cache: false
+
+metadata-files:
+  - _global.yaml # Must be in same folder/subfolder

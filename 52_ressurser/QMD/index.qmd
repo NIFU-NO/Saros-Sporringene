@@ -1,7 +1,0 @@
----
-format: html
-title: "SSN"
-sidebar: false
----
-
-Velkommen til Spørsmål til Skole-Norges rapportnettsted. 

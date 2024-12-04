@@ -1,0 +1,10 @@
+cat_prop_plot:
+ - totals: false
+
+categories_treated_as_na:
+- 'Benyttes ikke'
+- 'Vet ikke'
+- 'Usikker'
+- 'Har ikke brukt støtteressursen'
+- 'Ikke hatt'
+- 'Ikke valgt'

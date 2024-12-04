@@ -1,6 +1,0 @@
----
-format: html
-title: "Spørsmål til Skole-Norge"
----
-
-Velkommen til Spørsmål til Skole-Norges rapportnettsted. 

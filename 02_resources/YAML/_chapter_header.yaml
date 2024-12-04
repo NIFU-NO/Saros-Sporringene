@@ -1,0 +1,25 @@
+---
+format: 
+  html: default
+  nifudocx-docx: default 
+  nifu_pub-typst: default
+execute:
+  echo: false
+  warning: false
+  message: false
+  cache: false
+toc: true
+toc-depth: 4
+quarto-required: ">= 1.5"
+crossref:
+ fig-title: '**Figur**'
+ tbl-title: '**Tabell**'
+ title-delim: '**.**'
+ fig-prefix: figur
+ tbl-prefix: tabell
+lang: "nb"
+number-sections: true
+number-depth: 3
+df-print: kable
+fig-dpi: 900
+---

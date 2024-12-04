@@ -1,0 +1,26 @@
+
+
+::: {{.panel-tabset}}
+
+::: {{#tbl-sigtest-tables-{.chapter_foldername} .column-page}}
+
+```{{r}}
+indeps <- c("resp", "landsdel_gs", "landsdel_vgs", "landsdel_kom", "landsdel_fylk",  "fylke_gs", "fylke_vgs", "fylke_kom", "fylke_fylk", "kstør_gs", "kstør_kom", "sentind3d_gs", "sentind3d_vgs", "sentind3d_kom", "sk4d", "gs3d", "typevgs", "vgs3d", "gsvg3d")
+
+sigtest_tables_{.chapter_foldername} <- 
+    indeps |>
+    rlang::set_names() |>
+    purrr::map(.f = ~{{
+    makeme(data = data_{.chapter_foldername},
+        dep = -all_of(indeps),
+        indep = all_of(.x),
+        type = "sigtest_table_html") |>
+    gt()
+}})
+```
+
+_Signifikanstester per uavhengig variabel_.
+
+:::
+
+:::

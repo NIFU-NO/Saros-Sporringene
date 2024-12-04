@@ -1,0 +1,4 @@
+
+## To måter å lese rapporten på
+1.    Du kan lese rapporten interaktivt fordelt på kapitler på venstre side. Da får du hyperlenker, og mulighet til å referere til et spesifikt avsnitt som en URL.
+2.    Du kan noen steder kunne finne Word (DOCX)- og PDF-filer, men disse er eksperimentelle, foreløpig ikke like pene som HTML-sidene, og vil aldri tilby interaktiviteten som nettstedet tilbyr. Det vil oftest bli penere å skrive ut nettsidene som PDF enn å laste ned PDF-filene.

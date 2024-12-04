@@ -1,0 +1,23 @@
+---
+title: "`r basename(getwd())`"
+date-format: "DD.MM.YYYY"
+abstract: ""
+preface: ""
+project_no: "20715"
+funder: "Utdanningsdirektoratet"
+funder_address: "Schweigaards gate 15B, 0191 Oslo"
+isbn: "978-82-327-0607-5"
+issn: "1894-8200 (online)"
+signer_1: "Cay Gjerustad"
+signer_1_title: "Forskningsleder"
+signer_2: "Vibeke Opheim"
+signer_2_title: "Direktør"
+figure_table: true
+table_table: true
+report_type: rapport
+sidebar: false
+format: 
+  nifu_pub-typst: default
+  nifudocx-docx:
+    number-sections: false
+---
